@@ -34,8 +34,8 @@ heroku/nodejs
 * Any text editor
 ## `Clone Repo & Installation dependencies`
 ```bash
-git clone https://github.com/DGXeon/CheemsBot-MD2.git
-cd CheemsBot-MD2
+git clone https://github.com/darlyn1234/darl2-bot.git
+cd darl2-bot
 npm start
 ```
 ## `For Termux/Ssh/Ubuntu`
@@ -50,8 +50,8 @@ pkg install nodejs -y
 pkg install ffmpeg -y 
 pkg install wget
 pkg install imagemagick -y
-git clone https://github.com/DGXeon/CheemsBot-MD2
-cd CheemsBot-MD2
+git clone https://github.com/darlyn1234/darl2-bot
+cd darl2-bot
 npm start
 ```
 ## `For VPS`
@@ -62,8 +62,8 @@ apt apt install ffmpeg
 apt apt install libwebp 
 apt apt install imagemagick
 apt install bash
-git clone https://github.com/DGXeon/CheemsBot-MD2
-cd CheemsBot-MD2
+git clone https://github.com/darlyn1234/darl2-bot
+cd darl2-bot
 npm start
 ```
 ## `For 24/7 Activation`
