@@ -1,10 +1,7 @@
 //═══════════════════════════════════════════════════════//
-//If you want to recode, reupload
 //or copy the codes/script,
-//pls give credit
 //no credit? i will take action immediately
-//© 2022 Xeon Bot Inc. Doge Bot 
-//Thank you to Lord Buddha, Family and Myself
+//© 2022 Xeon Bot && DARLYN
 //════════════════════════════//
 
 const fs = require('fs')
@@ -30,23 +27,23 @@ global.footer = 'div> 𝑆𝑜𝑓𝑓𝑓 </div>'
 global.ig = 'https://appweb-darlyn.vercel.app'
 global.region = 'Peru, Bcn'
 global.sc = 'https://appweb-darlyn.vercel.app'
-global.myweb = 'https://wa.me/51923513366'
+global.myweb = 'https://github.com/darlyn1234'
 global.packname = '->'
 global.author = 'Darlyn | ≛ ⃝🧋•𝑫𝒂𝒓𝒍𝒚𝒏⸙𔘓ৎ୭🩹៸៸◗ ⋆ 🪜 ⏜⃞ჩ ♞ ᵈᵃʳˡʸⁿ — 𖦹࣪ᰍ\nhttps://appweb-darlyn.vercel.app𓈃ּ ៹🍏𝗱𝑎𝙧̲𝘭𝐲̲𝘯̲𐂂!s⁹⁷☻‹𝟹'
 global.sessionName = 'session'
 global.prefa = ['','!','.','🐦','🐤','🗿']
 global.sp = '⭔'
 global.mess = {
-    success: 'Done ✓',
-    admin: 'This Feature Is Only For Admin!',
-    botAdmin: 'Bot Must Be Admin First!',
-    owner: 'This Feature Is Only For Owner!',
-    group: 'Feature Used Only For Groups!',
-    private: 'Features Used Only For Private Chat!',
-    bot: 'This Feature Is Only For Bot',
-    wait: 'In Process...',
-    error: 'Error! Maybe Api Key Is Expired🤔!',
-    endLimit: 'Your Daily Limit Has Expired, The Limit Will Be Reset Every 12 Hours',
+    success: 'Listo ✓',
+    admin: 'Esta función es solo para administradores!',
+    botAdmin: 'El bot debe ser administrador primero!',
+    owner: 'Esta función es solo para el owner!',
+    group: 'Función utilizada solo para grupos!',
+    private: 'Funciones utilizadas solo para chat privado!',
+    bot: 'Esta función es solo para bot',
+    wait: 'En proceso...',
+    error: 'Error! Posiblemente la ApiKey haya caducado🤔!',
+    endLimit: 'Su límite diario ha expirado, el límite se restablecerá cada 12 horas',
 }
     global.limitawal = {
     premium: "Infinity",
