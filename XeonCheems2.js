@@ -1,5 +1,5 @@
 //═══════════════════════════════════════════════════════//
-
+// DARLYN && CHEEMMS
 //════════════════════════════//
 require('./settings')
 const { BufferJSON, WA_DEFAULT_EPHEMERAL, generateWAMessageFromContent, proto, generateWAMessageContent, generateWAMessage, prepareWAMessageMedia, areJidsSameUser, getContentType } = require('@adiwajshing/baileys')
@@ -258,7 +258,7 @@ const reply = (teks) => {
         }
         }
 
-        //auto reply by xeon 🦄
+        //auto reply by darlyn
        /* for (let anji of setik){
 				if (budy === pene){
 					result = fs.readFileSync(`./XeonMedia/sticker/pene.webp`)
@@ -289,7 +289,7 @@ const reply = (teks) => {
       return
       }
         
-        //media detect by 🦄xeon\\
+        //media detect by Darlyn\\
 		const isQuotedImage = type === 'extendedTextMessage' && content.includes('imageMessage')
 		const isQuotedVideo = type === 'extendedTextMessage' && content.includes('videoMessage')
 		const isQuotedAudio = type === 'extendedTextMessage' && content.includes('audioMessage')
@@ -1748,12 +1748,12 @@ break
                     await sleep(1500)
                     let btn = [{
                                 urlButton: {
-                                    displayText: 'Script🔖',
+                                    displayText: 'Web🔖',
                                     url: `${sc}`
                                 }
                             }, {
                                 urlButton: {
-                                    displayText: 'YouTube📍',
+                                    displayText: 'GitHub📍',
                                     url: `${myweb}`
                                 }
                             }, {
@@ -1782,12 +1782,12 @@ break
 		    await sleep(1500)
 		    let btn = [{
                                 urlButton: {
-                                    displayText: 'Script🔖',
+                                    displayText: 'Web🔖',
                                     url: `${sc}`
                                 }
                             }, {
                                 urlButton: {
-                                    displayText: 'YouTube📍',
+                                    displayText: 'GitHub📍',
                                     url: `${myweb}`
                                 }
                             }, {
@@ -2078,16 +2078,16 @@ break
                 let buttonMessage = {
                     image: { url: anu.thumbnail },
                     caption: `
-🐶 Title : ${anu.title}
-🐶 Ext : Search
-🐶 ID : ${anu.videoId}
-🐶 Duration : ${anu.timestamp}
-🐶 Viewes : ${anu.views}
-🐶 Uploaded On : ${anu.ago}
-🐶 Author : ${anu.author.name}
-🐶 Channel : ${anu.author.url}
-🐶 Description : ${anu.description}
-🐶 Url : ${anu.url}`,
+✎  Titulo : ${anu.title}
+✎  Ext : Search
+✎  ID : ${anu.videoId}
+✎  Duracion : ${anu.timestamp}
+✎  Vistas : ${anu.views}
+✎  Subido ell : ${anu.ago}
+✎  Autor : ${anu.author.name}
+✎  Canal : ${anu.author.url}
+✎  Descripcion : ${anu.description}
+✎  Url : ${anu.url}`,
                     footer: XeonBotInc.user.name,
                     buttons: buttons,
                     headerType: 4
@@ -2797,7 +2797,7 @@ case 'webtonsearch': case 'webtoon':
                 if (!text) return reply(`Enter Query Link!`)
                 reply(mess.wait)
                 let anu = await fetchJson(api('zenz', '/api/downloader/facebook', { url: text }, 'apikey'))
-                XeonBotInc.sendMessage(m.chat, { video: { url: anu.result.url }, caption: `🐶 Title : ${anu.result.title}`}, { quoted: m })
+                XeonBotInc.sendMessage(m.chat, { video: { url: anu.result.url }, caption: `✎  Title : ${anu.result.title}`}, { quoted: m })
             }
             break
 	        case 'pindl': case 'pinterestdl': {
@@ -2819,13 +2819,12 @@ case 'webtonsearch': case 'webtoon':
 		    let buttonMessage = {
 		        image: { url: anu.author.profilePic },
 			caption: `
-🐶 Title : ${anu.title}
-🐶 Author : ${anu.author.name}
-🐶 Like : ${anu.like}
-🐶 Caption : ${anu.caption}
-🐶 Url : ${anu.media[0]}
-To Download Media, Please Click One Of The Buttons Below Or Enter The ytmp3/ytmp4 Command With The Url Above
-`,
+✎  Title : ${anu.title}
+✎  Author : ${anu.author.name}
+✎  Like : ${anu.like}
+✎  Caption : ${anu.caption}
+✎  Url : ${anu.media[0]}
+Para descargar medios, haga clic en uno de los botones a continuación o ingrese el comando ytmp3/ytmp4 con la URL de arriba`,
 			footer: XeonBotInc.user.name,
 			buttons,
 			headerType: 4
@@ -3064,7 +3063,7 @@ View List Of Messages With ${prefix}listmsg`)
                     let buttons = [
                         { buttonId: 'start', buttonText: { displayText: '🚶Start🚶' }, type: 1 }
                     ]
-                    await XeonBotInc.sendButtonText(m.chat, buttons, `\`\`\`You Are Not In An Anonymous Session, Press The Button To Find A Partner \`\`\``)
+                    await XeonBotInc.sendButtonText(m.chat, buttons, `\`\`\`No está en una sesión anónima, presione el botón para encontrar un socio\`\`\``)
                    reply(false)
                 }
                 reply('Ok')
@@ -3159,19 +3158,24 @@ View List Of Messages With ${prefix}listmsg`)
                 }
                 break
             }
-            case 'public': {
+            case 'public':
+	case 'publico':{
                 if (!isCreator) return replay(`${mess.owner}`)
                 XeonBotInc.public = true
-                reply('Successful Change To Public Usage')
+                reply('Modo publico activado')
             }
             break
-            case 'self': {
+            case 'self':
+	case 'privado': {
                 if (!isCreator) return replay(`${mess.owner}`)
                 XeonBotInc.public = false
-                reply('Successful Change To Self Usage')
+                reply('Modo privado activado')
             }
             break
-            case 'ping': case 'botstatus': case 'statusbot': {
+        case 'ping': 
+	case 'velocidad':
+	case 'botstatus': 
+	case 'statusbot': {
                 const used = process.memoryUsage()
                 const cpus = os.cpus().map(cpu => {
                     cpu.total = Object.keys(cpu.times).reduce((last, type) => last + cpu.times[type], 0)
@@ -3275,7 +3279,11 @@ Report Message: ${text}` })
 reply(`Informado con éxito al propietario\n\nAsegúrese de que el error sea válido. Si juega con esto, use esta función una y otra vez sin ningún motivo, será bloqueado con seguridad. !`)
                     }
                     break
-                    case 'tes': case 'test': case 'alive': case 'bot': case 'robot':{
+        case 'tes': 
+	case 'test':
+	case 'alive':
+	case 'bot':
+	case 'robot':{
                            	timestampe = speed();
 latensie = speed() - timestampe
  anu = ` `
@@ -3303,7 +3311,7 @@ const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
    └───────────────┈ ⳹`,
                             hydratedButtons: [{
                                 urlButton: {
-                                    displayText: 'Wame📍',
+                                    displayText: 'GitHub📍',
                                     url: `${myweb}`
                                 }
                             }, {
@@ -3364,7 +3372,7 @@ const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
    └───────────────┈ ⳹`,
                             hydratedButtons: [{
                                 urlButton: {
-                                    displayText: 'Wame📍',
+                                    displayText: 'GitHub📍',
                                     url: `${myweb}`
                                 }
                             }, {
@@ -3517,7 +3525,8 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
             XeonBotInc.relayMessage(m.chat, template.message, { messageId: template.key.id })
             }
             break
-    case 'donasi': case 'donate': case 'sewabot': case 'sewa': case 'buypremium': case 'donate': {
+    case 'donasi': 
+	case 'donate': {
                 XeonBotInc.sendMessage(m.chat, { image: { url: 'https://i.ibb.co/ZcPLKgK/darlyn-profile-programacion.jpg' }, caption: `Hi ${m.pushName}\nWeb🔖: https://appweb-darlyn.vercel.app\nwa.me/51923513366 (Mi numero xd)` }, { quoted: m })
             }
             break
@@ -3537,11 +3546,12 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
 │✙ 𝗣𝗹𝗮𝘁𝗳𝗼𝗿𝗺 : ${os.platform()}
 │✙ 𝗧𝗼𝘁𝗮𝗹 𝗨𝘀𝗲𝗿 : ${Object.keys(global.db.data.users).length}
 └──────────────┈ ⳹
-                ` } , [{"urlButton": {"displayText": "Wame📍","url": `${myweb}`}},{"urlButton": {"displayText": "Web🔖","url": `${sc}`}}] )
+                ` } , [{"urlButton": {"displayText": "GitHub📍","url": `${myweb}`}},{"urlButton": {"displayText": "Web🔖","url": `${sc}`}}] )
             }
             break
-            case 'sc': case 'script': {
-                reply(`GitHub : https://github.com/darl-bot\n\nWeb : https:appweb-darlyn.vercel.app`)
+            case 'sc': 
+	     case 'script': {
+                reply(`GitHub : https://github.com/darlyn1234/darl2-bot\n\nWeb : https:appweb-darlyn.vercel.app`)
             }
             break
 case 'allmenu':
@@ -3785,7 +3795,7 @@ case 'allmenu':
                             hydratedFooterText: `${pushname}`,
                             hydratedButtons: [{
                                 urlButton: {
-                                    displayText: 'YouTube📍',
+                                    displayText: 'GitHub📍',
                                     url: `${myweb}`
                                 }
                             }, {
@@ -3819,7 +3829,7 @@ await XeonBotInc.send5ButImg(from, `` + '' + ' ', `
 ┃╠ ${prefix}donate
 ┃╠ ${prefix}report [bug]
 ┃╚═════════════✪
-┗━━「 ${pushname} 」━⭓`,unicorn, [{"urlButton": {"displayText": "Wame📍","url": `${myweb}`}},{"urlButton": {"displayText": "Web🔖","url": `${sc}`}}] )
+┗━━「 ${pushname} 」━⭓`,unicorn, [{"urlButton": {"displayText": "GitHub📍","url": `${myweb}`}},{"urlButton": {"displayText": "Web🔖","url": `${sc}`}}] )
 break
 
 case 'grupmenu': case 'groupmenu':
@@ -3848,7 +3858,7 @@ await XeonBotInc.send5ButImg(from, `` + '' + ' ', `
 ┃╠${prefix}checkvote
 ┃╠${prefix}delvote
 ┃╚═════════════✪
-┗━━「 ${pushname} 」━⭓`,unicorn, [{"urlButton": {"displayText": "Wame📍","url": `${myweb}`}},{"urlButton": {"displayText": "Web🔖","url": `${sc}`}}])
+┗━━「 ${pushname} 」━⭓`,unicorn, [{"urlButton": {"displayText": "GitHub📍","url": `${myweb}`}},{"urlButton": {"displayText": "Web🔖","url": `${sc}`}}])
 break
 
 case 'rpgmenu':
@@ -3866,7 +3876,7 @@ await XeonBotInc.send5ButImg(from, `` + '' + ' ', `
 ┃╠${prefix}buy [option]
 ┃╠${prefix}sell [option]
 ┃╚═════════════✪
-┗━━「 ${pushname} 」━⭓`,unicorn, [{"urlButton": {"displayText": "Wame📍","url": `${myweb}`}},{"urlButton": {"displayText": "Web🔖","url": `${sc}`}}] )
+┗━━「 ${pushname} 」━⭓`,unicorn, [{"urlButton": {"displayText": "GitHub📍","url": `${myweb}`}},{"urlButton": {"displayText": "Web🔖","url": `${sc}`}}] )
 break
 
 case 'funmenu':
@@ -3919,7 +3929,7 @@ await XeonBotInc.send5ButImg(from, `` + '' + ' ', `
 ┃╠ ${prefix}math [mode]
 ┃╠ ${prefix}suitpvp [tag]
 ┃╚═════════════✪
-┗━━「 ${pushname} 」━⭓`,unicorn, [{"urlButton": {"displayText": "Wame📍","url": `${myweb}`}},{"urlButton": {"displayText": "Web🔖","url": `${sc}`}}] )
+┗━━「 ${pushname} 」━⭓`,unicorn, [{"urlButton": {"displayText": "GitHub📍","url": `${myweb}`}},{"urlButton": {"displayText": "Web🔖","url": `${sc}`}}] )
 break
 
 case 'ownermenu':
@@ -3948,7 +3958,7 @@ await XeonBotInc.send5ButImg(from, `` + '' + ' ', `
 ┃╠${prefix}checkvote
 ┃╠${prefix}delvote
 ┃╚═════════════✪
-┗━━「 ${pushname} 」━⭓`,unicorn, [{"urlButton": {"displayText": "Wame📍","url": `${myweb}`}},{"urlButton": {"displayText": "Web🔖","url": `${sc}`}}] )
+┗━━「 ${pushname} 」━⭓`,unicorn, [{"urlButton": {"displayText": "GitHub📍","url": `${myweb}`}},{"urlButton": {"displayText": "Web🔖","url": `${sc}`}}] )
 break
 case 'downloadmenu':
 var unicorn = await getBuffer(picak+'Downloader Menu')
@@ -3963,7 +3973,7 @@ await XeonBotInc.send5ButImg(from, `` + '' + ' ', `
 ┃╠${prefix}joox [query]
 ┃╠${prefix}soundcloud [url]
 ┃╚═════════════✪
-┗━━「 ${pushname} 」━⭓`,unicorn, [{"urlButton": {"displayText": "Wame📍","url": `${myweb}`}},{"urlButton": {"displayText": "Web🔖","url": `${sc}`}}] )
+┗━━「 ${pushname} 」━⭓`,unicorn, [{"urlButton": {"displayText": "GitHub📍","url": `${myweb}`}},{"urlButton": {"displayText": "Web🔖","url": `${sc}`}}] )
 break
 case 'searchmenu':
 var unicorn = await getBuffer(picak+'Search Menu')
@@ -3982,7 +3992,7 @@ await XeonBotInc.send5ButImg(from, `` + '' + ' ', `
 ┃╠${prefix}ringtone [query]
 ┃╠${prefix}webtoon [query]
 ┃╚═════════════✪
-┗━━「 ${pushname} 」━⭓`,unicorn, [{"urlButton": {"displayText": "Wame📍","url": `${myweb}`}},{"urlButton": {"displayText": "Web🔖","url": `${sc}`}}] )
+┗━━「 ${pushname} 」━⭓`,unicorn, [{"urlButton": {"displayText": "GitHub📍","url": `${myweb}`}},{"urlButton": {"displayText": "Web🔖","url": `${sc}`}}] )
 break
 case 'randommenu':
 var unicorn = await getBuffer(picak+'Random Menu')
@@ -3993,7 +4003,7 @@ await XeonBotInc.send5ButImg(from, `` + '' + ' ', `
 ┃╠${prefix}animequote (indo)
 ┃╠${prefix}couplepp
 ┃╚═════════════✪
-┗━━「 ${pushname} 」━⭓`,unicorn, [{"urlButton": {"displayText": "Wame📍","url": `${myweb}`}},{"urlButton": {"displayText": "Web🔖","url": `${sc}`}}] )
+┗━━「 ${pushname} 」━⭓`,unicorn, [{"urlButton": {"displayText": "GitHub📍","url": `${myweb}`}},{"urlButton": {"displayText": "Web🔖","url": `${sc}`}}] )
 break
 case 'randomanimemenu':
 var unicorn = await getBuffer(picak+'Random Anime Menu')
@@ -4028,7 +4038,7 @@ await XeonBotInc.send5ButImg(from, `` + '' + ' ', `
 ┃╠${prefix}dance
 ┃╠${prefix}cringe
 ┃╚═════════════✪
-┗━━「 ${pushname} 」━⭓`,unicorn, [{"urlButton": {"displayText": "Wame📍","url": `${myweb}`}},{"urlButton": {"displayText": "Web🔖","url": `${sc}`}}] )
+┗━━「 ${pushname} 」━⭓`,unicorn, [{"urlButton": {"displayText": "GitHub📍","url": `${myweb}`}},{"urlButton": {"displayText": "Web🔖","url": `${sc}`}}] )
 break
 case 'textpromenu':
 var unicorn = await getBuffer(picak+'Text Pro Menu')
@@ -4067,7 +4077,7 @@ await XeonBotInc.send5ButImg(from, `` + '' + ' ', `
 ┃╠ ${prefix}blackpink [txt]
 ┃╠ ${prefix}gluetext [txt]
 ┃╚═════════════✪
-┗━━「 ${pushname} 」━⭓`,unicorn, [{"urlButton": {"displayText": "Wame📍","url": `${myweb}`}},{"urlButton": {"displayText": "Web🔖","url": `${sc}`}}] )
+┗━━「 ${pushname} 」━⭓`,unicorn, [{"urlButton": {"displayText": "GitHub📍","url": `${myweb}`}},{"urlButton": {"displayText": "Web🔖","url": `${sc}`}}] )
 break
 case 'convertmenu':
 var unicorn = await getBuffer(picak+'Converter Menu')
@@ -4086,7 +4096,7 @@ await XeonBotInc.send5ButImg(from, `` + '' + ' ', `
 ┃╠ ${prefix}ebinary [reply txt]
 ┃╠ ${prefix}dbinary [reply txt]
 ┃╚═════════════✪
-┗━━「 ${pushname} 」━⭓`,unicorn, [{"urlButton": {"displayText": "Wame📍","url": `${myweb}`}},{"urlButton": {"displayText": "Web🔖","url": `${sc}`}}] )
+┗━━「 ${pushname} 」━⭓`,unicorn, [{"urlButton": {"displayText": "GitHub📍","url": `${myweb}`}},{"urlButton": {"displayText": "Web🔖","url": `${sc}`}}] )
 break
 case 'databasemenu':
 var unicorn = await getBuffer(picak+'Database Menu')
@@ -4102,7 +4112,7 @@ await XeonBotInc.send5ButImg(from, `` + '' + ' ', `
 ┃╠ ${prefix}getmsg
 ┃╠ ${prefix}delmsg
 ┃╚═════════════✪
-┗━━「 ${pushname} 」━⭓`,unicorn, [{"urlButton": {"displayText": "Wame📍","url": `${myweb}`}},{"urlButton": {"displayText": "Web🔖","url": `${sc}`}}] )
+┗━━「 ${pushname} 」━⭓`,unicorn, [{"urlButton": {"displayText": "GitHub📍","url": `${myweb}`}},{"urlButton": {"displayText": "Web🔖","url": `${sc}`}}] )
 break
 case 'databasemenu':
 var unicorn = await getBuffer(picak+'Database Menu')
@@ -4114,7 +4124,7 @@ await XeonBotInc.send5ButImg(from, `` + '' + ' ', `
 ┃╠${prefix}next
 ┃╠${prefix}leave
 ┃╚═════════════✪
-┗━━「 ${pushname} 」━⭓`,unicorn, [{"urlButton": {"displayText": "Wame📍","url": `${myweb}`}},{"urlButton": {"displayText": "Web🔖","url": `${sc}`}}] )
+┗━━「 ${pushname} 」━⭓`,unicorn, [{"urlButton": {"displayText": "GitHub📍","url": `${myweb}`}},{"urlButton": {"displayText": "Web🔖","url": `${sc}`}}] )
 break
 case 'islamicmenu':
 var unicorn = await getBuffer(picak+'Islamic Menu')
@@ -4123,7 +4133,7 @@ await XeonBotInc.send5ButImg(from, `` + '' + ' ', `
 ┃╔══✪「 ISLAMIC 」	        
 ┃╠${prefix}juzamma
 ┃╚═════════════✪
-┗━━「 ${pushname} 」━⭓`,unicorn, [{"urlButton": {"displayText": "Wame📍","url": `${myweb}`}},{"urlButton": {"displayText": "Web🔖","url": `${sc}`}}] )
+┗━━「 ${pushname} 」━⭓`,unicorn, [{"urlButton": {"displayText": "GitHub📍","url": `${myweb}`}},{"urlButton": {"displayText": "Web🔖","url": `${sc}`}}] )
 break
 case 'voicechangermenu':
     case 'voicemenu':
@@ -4143,7 +4153,7 @@ await XeonBotInc.send5ButImg(from, `` + '' + ' ', `
 ┃╠${prefix}slow [reply aud]
 ┃╠${prefix}squirrel [reply aud]
 ┃╚═════════════✪
-┗━━「 ${pushname} 」━⭓`,unicorn, [{"urlButton": {"displayText": "Wame📍","url": `${myweb}`}},{"urlButton": {"displayText": "Web🔖","url": `${sc}`}}] )
+┗━━「 ${pushname} 」━⭓`,unicorn, [{"urlButton": {"displayText": "GitHub📍","url": `${myweb}`}},{"urlButton": {"displayText": "Web🔖","url": `${sc}`}}] )
 break
 case 'horoscopemenu':
 var unicorn = await getBuffer(picak+'Horoscope Menu')
@@ -4181,7 +4191,7 @@ await XeonBotInc.send5ButImg(from, `` + '' + ' ', `
 ┃╠${prefix}zodiak (indo)
 ┃╠${prefix}shio (indo)
 ┃╚═════════════✪
-┗━━「 ${pushname} 」━⭓`,unicorn, [{"urlButton": {"displayText": "Wame📍","url": `${myweb}`}},{"urlButton": {"displayText": "Web🔖","url": `${sc}`}}] )
+┗━━「 ${pushname} 」━⭓`,unicorn, [{"urlButton": {"displayText": "GitHub📍","url": `${myweb}`}},{"urlButton": {"displayText": "Web🔖","url": `${sc}`}}] )
 break
 case 'thanksto': case 'tqto': case 'tqtt':
 var unicorn = await getBuffer(picak+'Developer by Darlyn')
@@ -4189,7 +4199,7 @@ await XeonBotInc.send5ButImg(from, `` + '' + ' ', `
 Thanks to
 Darlyn
 Maria
-Mortal xxx - pro !!!`,unicorn, [{"urlButton": {"displayText": "Wame📍","url": `${myweb}`}},{"urlButton": {"displayText": "Web🔖","url": `${sc}`}},{"quickReplyButton": {"displayText": "🍜Donate🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "👤Owner👤","id": 'owner'}}] )
+Mortal xxx - pro !!!`,unicorn, [{"urlButton": {"displayText": "GitHub📍","url": `${myweb}`}},{"urlButton": {"displayText": "Web🔖","url": `${sc}`}},{"quickReplyButton": {"displayText": "🍜Donate🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "👤Owner👤","id": 'owner'}}] )
 break
             default:
                 if (budy.startsWith('=>')) {
