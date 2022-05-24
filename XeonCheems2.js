@@ -4135,83 +4135,85 @@ await XeonBotInc.send5ButImg(from, `` + '' + ' ', `
 ┗━━「 ${pushname} 」━⭓`,unicorn, [{"urlButton": {"displayText": "GitHub📍","url": `${myweb}`}},{"urlButton": {"displayText": "Web🔖","url": `${sc}`}}] )
 break
 case 'databasemenu':
+    case 'menubase':
 var unicorn = await getBuffer(picak+'Database Menu')
 await XeonBotInc.send5ButImg(from, `` + '' + ' ', `
-┏━「 ${botname} 」━━⭓ 
-┃╔══✪「 ANONYMOUS CHAT 」	        
-┃╠${prefix}anonymous
-┃╠${prefix}start
-┃╠${prefix}next
-┃╠${prefix}leave
-┃╚═════════════✪
-┗━━「 ${pushname} 」━⭓`,unicorn, [{"urlButton": {"displayText": "GitHub📍","url": `${myweb}`}},{"urlButton": {"displayText": "Web🔖","url": `${sc}`}}] )
+[${botname}]  
+˖ ⩩𓄧 「 ANONYMOUS CHAT 」	        
+│❐ 🌿${prefix}anonymous
+│❐ 🌿${prefix}start
+│❐ 🌿${prefix}next
+│❐ 🌿${prefix}leave
+「 ⃟ 🍷ⓘ  darlyn 」`,unicorn, [{"urlButton": {"displayText": "GitHub📍","url": `${myweb}`}},{"urlButton": {"displayText": "Web🔖","url": `${sc}`}}] )
 break
 case 'islamicmenu':
+case 'menuislamic':
 var unicorn = await getBuffer(picak+'Islamic Menu')
 await XeonBotInc.send5ButImg(from, `` + '' + ' ', `
-┏━「 ${botname} 」━━⭓ 
-┃╔══✪「 ISLAMIC 」	        
-┃╠${prefix}juzamma
-┃╚═════════════✪
-┗━━「 ${pushname} 」━⭓`,unicorn, [{"urlButton": {"displayText": "GitHub📍","url": `${myweb}`}},{"urlButton": {"displayText": "Web🔖","url": `${sc}`}}] )
+[ ${botname} 」━━⭓ 
+˖ ⩩𓄧 [ ISLAMIC 」	        
+│❐ 🌿${prefix}juzamma
+「 ⃟ 🍷ⓘ  darlyn ]`,unicorn, [{"urlButton": {"displayText": "GitHub📍","url": `${myweb}`}},{"urlButton": {"displayText": "Web🔖","url": `${sc}`}}] )
 break
 case 'voicechangermenu':
     case 'voicemenu':
+        case 'menuvoz':
+            case 'menuvoice':
 var unicorn = await getBuffer(picak+'Voice Changer Menu')
 await XeonBotInc.send5ButImg(from, `` + '' + ' ', `
-┏━「 ${botname} 」━━⭓ 
-┃╔══✪「 VOICE CHANGER 」	        
-┃╠${prefix}bass [reply aud]
-┃╠${prefix}blown [reply aud]
-┃╠${prefix}deep [reply aud]
-┃╠${prefix}earrape [reply aud]
-┃╠${prefix}fast [reply aud]
-┃╠${prefix}fat [reply aud]
-┃╠${prefix}nightcore [reply aud]
-┃╠${prefix}reverse [reply aud]
-┃╠${prefix}robot [reply aud]
-┃╠${prefix}slow [reply aud]
-┃╠${prefix}squirrel [reply aud]
-┃╚═════════════✪
-┗━━「 ${pushname} 」━⭓`,unicorn, [{"urlButton": {"displayText": "GitHub📍","url": `${myweb}`}},{"urlButton": {"displayText": "Web🔖","url": `${sc}`}}] )
+${botname}」
+˖ ⩩𓄧 [ VOICE CHANGER 」	        
+│❐ 🌿${prefix}bass [reply aud]
+│❐ 🌿${prefix}blown [reply aud]
+│❐ 🌿${prefix}deep [reply aud]
+│❐ 🌿${prefix}earrape [reply aud]
+│❐ 🌿${prefix}fast [reply aud]
+│❐ 🌿${prefix}fat [reply aud]
+│❐ 🌿${prefix}nightcore [reply aud]
+│❐ 🌿${prefix}reverse [reply aud]
+│❐ 🌿${prefix}robot [reply aud]
+│❐ 🌿${prefix}slow [reply aud]
+│❐ 🌿${prefix}squirrel [reply aud]
+「 ⃟ 🍷ⓘ  darlyn `,unicorn, [{"urlButton": {"displayText": "GitHub📍","url": `${myweb}`}},{"urlButton": {"displayText": "Web🔖","url": `${sc}`}}] )
 break
 case 'horoscopemenu':
+    case 'menuhoroscopo':
+        case 'horoscopomenu':
 var unicorn = await getBuffer(picak+'Horoscope Menu')
 await XeonBotInc.send5ButImg(from, `` + '' + ' ', `
-┏━「 ${botname} 」━━⭓ 
-┃╔══✪「 HOROSCOPE 」	        
-┃╠${prefix}nomorhoki (indo)
-┃╠${prefix}artimimpi (indo)
-┃╠${prefix}artinama (indo)
-┃╠${prefix}ramaljodoh (indo)
-┃╠${prefix}ramaljodohbali (indo)
-┃╠${prefix}suamiistri (indo)
-┃╠${prefix}ramalcinta (indo)
-┃╠${prefix}cocoknama (indo)
-┃╠${prefix}pasangan (indo)
-┃╠${prefix}jadiannikah (indo)
-┃╠${prefix}sifatusaha (indo)
-┃╠${prefix}rezeki (indo)
-┃╠${prefix}pekerjaan (indo)
-┃╠${prefix}nasib (indo)
-┃╠${prefix}penyakit (indo)
-┃╠${prefix}tarot (indo)
-┃╠${prefix}fengshui (indo)
-┃╠${prefix}haribaik (indo)
-┃╠${prefix}harisangar (indo)
-┃╠${prefix}harisial (indo)
-┃╠${prefix}nagahari (indo)
-┃╠${prefix}arahrezeki (indo)
-┃╠${prefix}peruntungan (indo)
-┃╠${prefix}weton (indo)
-┃╠${prefix}karakter (indo)
-┃╠${prefix}keberuntungan (indo)
-┃╠${prefix}memancing (indo)
-┃╠${prefix}masasubur (indo)
-┃╠${prefix}zodiak (indo)
-┃╠${prefix}shio (indo)
-┃╚═════════════✪
-┗━━「 ${pushname} 」━⭓`,unicorn, [{"urlButton": {"displayText": "GitHub📍","url": `${myweb}`}},{"urlButton": {"displayText": "Web🔖","url": `${sc}`}}] )
+[${botname}] 
+˖ ⩩𓄧 HOROSCOPE     
+〈│❐ 🌿${prefix}nomorhoki (indo)
+〈│❐ 🌿${prefix}artimimpi (indo)
+〈│❐ 🌿${prefix}artinama (indo)
+〈│❐ 🌿${prefix}ramaljodoh (indo)
+〈│❐ 🌿${prefix}ramaljodohbali (indo)
+〈│❐ 🌿${prefix}suamiistri (indo)
+〈│❐ 🌿${prefix}ramalcinta (indo)
+〈│❐ 🌿${prefix}cocoknama (indo)
+〈│❐ 🌿${prefix}pasangan (indo)
+〈│❐ 🌿${prefix}jadiannikah (indo)
+〈│❐ 🌿${prefix}sifatusaha (indo)
+〈│❐ 🌿${prefix}rezeki (indo)
+〈│❐ 🌿${prefix}pekerjaan (indo)
+〈│❐ 🌿${prefix}nasib (indo)
+〈│❐ 🌿${prefix}penyakit (indo)
+〈│❐ 🌿${prefix}tarot (indo)
+〈│❐ 🌿${prefix}fengshui (indo)
+〈│❐ 🌿${prefix}haribaik (indo)
+〈│❐ 🌿${prefix}harisangar (indo)
+〈│❐ 🌿${prefix}harisial (indo)
+〈│❐ 🌿${prefix}nagahari (indo)
+〈│❐ 🌿${prefix}arahrezeki (indo)
+〈│❐ 🌿${prefix}peruntungan (indo)
+〈│❐ 🌿${prefix}weton (indo)
+〈│❐ 🌿${prefix}karakter (indo)
+〈│❐ 🌿${prefix}keberuntungan (indo)
+〈│❐ 🌿${prefix}memancing (indo)
+〈│❐ 🌿${prefix}masasubur (indo)
+〈│❐ 🌿${prefix}zodiak (indo)
+〈│❐ 🌿${prefix}shio (indo)
+「 ⃟ 🍷ⓘ  darlyn 」━⭓`,unicorn, [{"urlButton": {"displayText": "GitHub📍","url": `${myweb}`}},{"urlButton": {"displayText": "Web🔖","url": `${sc}`}}] )
 break
 case 'thanksto': case 'tqto': case 'tqtt':
 var unicorn = await getBuffer(picak+'Developer by Darlyn')
