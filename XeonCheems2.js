@@ -3569,9 +3569,11 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
                 ` } , [{"urlButton": {"displayText": "GitHub📍","url": `${myweb}`}},{"urlButton": {"displayText": "Web🔖","url": `${sc}`}}] )
             }
             break
-            case 'sc': 
+             case 'sc': 
+            case 'instalarbot':
+                case 'installbot':
 	     case 'script': {
-                reply(`GitHub : https://github.com/darlyn1234/darl2-bot\n\nWeb : https:appweb-darlyn.vercel.app`)
+                reply(`GitHub : https://github.com/darlyn1234/darl2-bot\n\nPasos para la instalacion : https://appweb-darlyn.vercel.app/works/pichu2`)
             }
             break
 case 'allmenu':
