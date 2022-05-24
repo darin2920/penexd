@@ -3279,7 +3279,27 @@ Report Message: ${text}` })
 reply(`Informado con éxito al propietario\n\nAsegúrese de que el error sea válido. Si juega con esto, use esta función una y otra vez sin ningún motivo, será bloqueado con seguridad. !`)
                     }
                     break
-        case 'tes': 
+case 'info':{
+timestampe = speed();
+latensie = speed() - timestampe
+reply(`┌┤✑ 「 BOT INFO 」
+│└───────────────┈ ⳹
+│✙ 𝗦𝗽𝗲𝗲𝗱 : ${latensie.toFixed(4)} miliseconds
+│✙ 𝗥𝘂𝗻𝘁𝗶𝗺𝗲 : ${runtime(process.uptime())}
+└───────────────┈ ⳹`)}
+break
+case 'info2':
+timestampe = speed();
+latensie = speed() - timestampe
+var unicorn = await getBuffer(picak+'Info Bot')
+await XeonBotInc.send5ButImg(from, `` + '' + ' ', `
+┌┤✑ 「 BOT INFO 」
+│└───────────────┈ ⳹
+│✙ 𝗦𝗽𝗲𝗲𝗱 : ${latensie.toFixed(4)} miliseconds
+│✙ 𝗥𝘂𝗻𝘁𝗶𝗺𝗲 : ${runtime(process.uptime())}
+└──────────────┈ ⳹`,unicorn, [{"urlButton": {"displayText": "GitHub📍","url": `${myweb}`}}] )
+break
+       case 'tes': 
 	case 'test':
 	case 'alive':
 	case 'bot':
