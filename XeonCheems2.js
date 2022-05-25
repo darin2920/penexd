@@ -1428,33 +1428,35 @@ case 'halah': case 'hilih': case 'huluh': case 'heleh': case 'holoh':
                 reply(mess.success)
                 }
                 break
-           case 'setgrouppp': case 'setgruppp': case 'setgcpp': {
+           case 'setgrouppp':
+            case 'setgruppp':
+             case 'setgcpp': {
                 if (!m.isGroup) return replay(`${mess.group}`)
                 if (!isAdmins) return replay(`${mess.admin}`)
-                if (!quoted) return replay(`Send/Reply Image With Caption ${prefix + command}`)
-                if (!/image/.test(mime)) return replay(`Send/Reply Image With Caption ${prefix + command}`)
-                if (/webp/.test(mime)) return replay(`Send/Reply Image With Caption ${prefix + command}`)
+                if (!quoted) return replay(`Enviar/Responder imagen con título ${prefix + command}`)
+                if (!/image/.test(mime)) return replay(`Enviar/Responder imagen con título ${prefix + command}`)
+                if (/webp/.test(mime)) return replay(`Enviar/Responder imagen con título ${prefix + command}`)
                 let media = await XeonBotInc.downloadAndSaveMediaMessage(quoted)
                 await XeonBotInc.updateProfilePicture(m.chat, { url: media }).catch((err) => fs.unlinkSync(media))
                 reply(mess.success)
                 }
                 break
-            case 'tagall': {
+            case 'tagall':
+	case 'mencionar':
+	case 'todos':{
                 if (!m.isGroup) return replay(`${mess.group}`)
-                if (!isBotAdmins) return replay(`${mess.botAdmin}`)
                 if (!isAdmins) return replay(`${mess.admin}`)
-let teks = `╚»˙·٠•●♥ Tag All ♥●•٠·˙«╝ 
+let teks = `╚»𓈃ּMencionando a todos𓈃ּ«╝ 
  
- ➲ *Message : ${q ? q : 'no message'}*\n\n`
+𓈃ּ Mensaje : ${q ? q : 'no message'}\n\n`
                 for (let mem of participants) {
-                teks += `🐶 @${mem.id.split('@')[0]}\n`
+                teks += `☻𓈃ּ☻ @${mem.id.split('@')[0]}\n`
                 }
                 XeonBotInc.sendMessage(m.chat, { text: teks, mentions: participants.map(a => a.id) }, { quoted: m })
                 }
                 break
                 case 'hidetag': {
             if (!m.isGroup) return replay(`${mess.group}`)
-            if (!isBotAdmins) return replay(`${mess.botAdmin}`)
             if (!isAdmins) return replay(`${mess.admin}`)
             XeonBotInc.sendMessage(m.chat, { text : q ? q : '' , mentions: participants.map(a => a.id)}, { quoted: m })
             }
@@ -3545,9 +3547,11 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
             XeonBotInc.relayMessage(m.chat, template.message, { messageId: template.key.id })
             }
             break
-    case 'donasi': 
-	case 'donate': {
-                XeonBotInc.sendMessage(m.chat, { image: { url: 'https://i.ibb.co/ZcPLKgK/darlyn-profile-programacion.jpg' }, caption: `Hi ${m.pushName}\nWeb🔖: https://appweb-darlyn.vercel.app\nwa.me/51923513366 (Mi numero xd)` }, { quoted: m })
+            case 'sc': 
+            case 'instalarbot':
+            case 'installbot':
+	        case 'script':  {
+                XeonBotInc.sendMessage(m.chat, { image: { url: 'https://i.imgur.com/K3nhp5e.png' }, caption: `Hi *${m.pushName}*.\n\nGitHub : https://github.com/darlyn1234/darl2-bot\n\nPasos para la instalacion en linux o PC: https://appweb-darlyn.vercel.app/works/pichu2` }, { quoted: m })
             }
             break
             case 'menu2': {
@@ -3569,11 +3573,8 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
                 ` } , [{"urlButton": {"displayText": "GitHub📍","url": `${myweb}`}},{"urlButton": {"displayText": "Web🔖","url": `${sc}`}}] )
             }
             break
-             case 'sc': 
-            case 'instalarbot':
-                case 'installbot':
-	     case 'script': {
-                reply(`GitHub : https://github.com/darlyn1234/darl2-bot\n\nPasos para la instalacion : https://appweb-darlyn.vercel.app/works/pichu2`)
+             case 'indefinido': {
+                reply(`.......`)
             }
             break
 case 'allmenu':
