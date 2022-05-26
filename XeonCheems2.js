@@ -1025,6 +1025,88 @@ Please @${m.mentionedJid[0].split`@`[0]} To Type Accept/Reject`
                 }
             }
             break
+	
+case 'hn':
+case 'hnum':
+case 'hacknum':               
+numero = `${args[0].replace('@', '')}`                
+uwus = ['```']                
+anu = await fetchJson(`http://apilayer.net/api/validate?access_key=0037494de576f1341eb310a420dd5cb0&number=${numero}&country_code=&format=1`)             
+reply(`
+Numero : ${anu.number}
+                
+Formato local : ${anu.local_format}
+                
+Formato internacional : ${anu.international_format}
+                
+Prefijo de pais : ${anu.country_prefix}
+                
+Codigo de pais : ${anu.country_code}
+                
+Nombre de pais : ${anu.country_name}
+                
+Localización : ${anu.location}
+                
+Empresa : ${anu.carrier}
+                
+Tipo de línea : ${anu.line_type}`)
+                
+break
+case 'checkbin':
+case 'bin':
+cc = args.join(' ')
+uwus = ['```']
+anu = await fetchJson(`https://lookup.binlist.net/${cc}`)
+reply(`${uwus}Numero : ${cc}
+
+Esquema : ${anu.scheme}
+
+Marca : ${anu.brand}
+
+Tipo : ${anu.type}
+
+Pais : ${anu.country.emoji}${anu.country.name}${anu.country.emoji}
+
+Emoji : ${anu.country.emoji}
+
+Localización : 
+
+Longitud ${anu.country.latitude}
+
+Latitud ${anu.country.longitude}
+
+Banco : ${anu.bank.name}
+
+Numero : ${anu.bank.phone}
+
+Url : ${anu.bank.url}
+
+Ciudad : ${anu.bank.city}${uwus}`)
+break
+
+case 'rana':  {
+    let buttons = [
+            {buttonId: `sc`, buttonText: {displayText: 'Script'}, type: 1},{buttonId: `allmenu`, buttonText: {displayText: 'All menu'}, type: 1}
+        ]
+        let buttonMessage = {
+            image: { url: 'https://raw.githubusercontent.com/pajaar/grabbed-results/master/pajaar-2020-gambar-anime.txt' },
+            caption: `Random ranas`,
+            footer: XeonBotInc.user.name,
+            buttons: buttons,
+            headerType: 4
+        }
+        XeonBotInc.sendMessage(m.chat, buttonMessage, { quoted: m })
+    }
+    break
+    case 'contar':
+        if (args.length == 0) return reply('0 caracteres| Su texto no contiene letras!')
+        const count = body.slice(8).length
+        if (count === 1) {
+        reply(`El texto solo contine *${count}* caracter.`)
+        } else if (count > 1) {
+        reply(`Su texto contiene *${count}* caracteres.`)
+        }
+        break
             case 'halah': case 'hilih': case 'huluh': case 'heleh': case 'holoh':
             if (!m.quoted && !text) return replay(`Send/Reply Text With Caption ${prefix + command}`)
             ter = command[1].toLowerCase()
