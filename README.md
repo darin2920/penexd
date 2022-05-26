@@ -33,13 +33,13 @@ heroku/nodejs
 * [Libwebp](https://developers.google.com/speed/webp/download)
 * Any text editor
 ## `Clone Repo & Installation dependencies`
-```bash
+```rb
 git clone https://github.com/darlyn1234/darl2-bot.git
 cd darl2-bot
 npm start
 ```
 ## `For Termux/Ssh/Ubuntu`
-```bash
+```rb
 apt update
 apt upgrade
 pkg update && pkg upgrade
@@ -55,7 +55,7 @@ cd darl2-bot
 npm start
 ```
 ## `For VPS`
-```bash
+```rb
 apt install nodejs 
 apt install git 
 apt apt install ffmpeg 
@@ -67,6 +67,6 @@ cd darl2-bot
 npm start
 ```
 ## `For 24/7 Activation`
-```bash
+```rb
 npm i -g pm2 && pm2 start index.js && pm2 save && pm2 logs
 ```
