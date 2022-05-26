@@ -3383,68 +3383,53 @@ await XeonBotInc.send5ButImg(from, `` + '' + ' ', `
 │✙ 𝗥𝘂𝗻𝘁𝗶𝗺𝗲 : ${runtime(process.uptime())}
 └──────────────┈ ⳹`,unicorn, [{"urlButton": {"displayText": "GitHub📍","url": `${myweb}`}}] )
 break
-       case 'tes': 
-	case 'test':
-	case 'alive':
-	case 'bot':
-	case 'robot':{
-                           	timestampe = speed();
+            case 'tes': 
+            case 'test':
+            case 'alive':
+            case 'bot':
+            case 'robot': {
+    timestampe = speed();
 latensie = speed() - timestampe
- anu = ` `
-const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
-                    templateMessage: {
-                        hydratedTemplate: {
-                            hydratedContentText: anu,
-                            locationMessage: {
-                            jpegThumbnail: fs.readFileSync('./XeonMedia/cheemspic.jpg')},
-                            hydratedFooterText: `┌─❖
-└┬❖ 「 ${pushname} 」
-┌┤✑ wa.me/${m.sender.split("@")[0]}
+            ngen = `Hola ${pushname}`
+message = await prepareWAMessageMedia({ video : { url: 'https://a.uguu.se/pPremJsZ.mp4' } }, { upload:   XeonBotInc.waUploadToServer })
+        template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
+            templateMessage: {
+                hydratedTemplate: {
+                    videoMessage: message.videoMessage,
+                    hydratedContentText: ngen,
+                    hydratedFooterText: `
+❖ wa.me/${m.sender.split("@")[0]}
+┌┤✑ 「 BOT INFO 」
 │└───────────────┈ ⳹
-│ 「 BOT INFO 」
 │✙ 𝗦𝗽𝗲𝗲𝗱 : ${latensie.toFixed(4)} miliseconds
 │✙ 𝗥𝘂𝗻𝘁𝗶𝗺𝗲 : ${runtime(process.uptime())}
 │✙ 𝗕𝗼𝘁 𝗡𝗮𝗺𝗲 : ${global.botname}
-│✙ 𝗢𝘄𝗻𝗲𝗿 𝗡𝗮𝗺𝗲 : ${global.ownername}
+│✙ 𝗢𝘄??𝗲𝗿 𝗡𝗮𝗺𝗲 : 𓈃ּ ៹🍏𝗱𝑎𝙧̲𝘭𝐲̲𝘯̲𐂂!
 │✙ 𝗢𝘄𝗻𝗲𝗿 𝗡𝘂𝗺𝗯𝗲𝗿 : ${global.owner}
 │✙ 𝗛𝗼𝘀𝘁 𝗡𝗮𝗺𝗲 : ${os.hostname()}
 │✙ 𝗣𝗹𝗮𝘁𝗳𝗼𝗿𝗺 : ${os.platform()}
-│✙ 𝗧𝗼𝘁𝗮𝗹 𝗨𝘀𝗲𝗿 : ${Object.keys(global.db.data.users).length}
-└┬──────────────┈ ⳹
-   │✑ Seleccione el boton de abajo
-   └───────────────┈ ⳹`,
-                            hydratedButtons: [{
-                                urlButton: {
-                                    displayText: 'GitHub📍',
-                                    url: `${myweb}`
-                                }
-                            }, {
-                            	urlButton: {
-                                displayText: 'Web🔖',
-                                    url: `${sc}`
-                                }
-                            }, {
-                                quickReplyButton: {
-                                    displayText: '🍇All Menu🍇',
-                                    id: `${prefix}allmenu`
-                                }
-                                }, {
-                                quickReplyButton: {
-                                    displayText: '🍒List Menu🍒',
-                                    id: `${prefix}command`
-                                }
-                                }, {
-                                quickReplyButton: {
-                                    displayText: '👤Owner👤',
-                                    id: `${prefix}owner`
-                                }
-                            }]
+└──────────────┈ ⳹`,
+                    hydratedButtons: [{
+                        urlButton: {
+                            displayText: 'GitHub🔖',
+                            url: `https://github.com/darlyn1234`
                         }
-                    }
-                }), { userJid: m.chat })
-                XeonBotInc.relayMessage(m.chat, template.message, { messageId: template.key.id })
+                    }, {
+                        quickReplyButton: {
+                            displayText: '🍒List Menu🍒',
+                            id: `command`
+                            }
+                        },{quickReplyButton: {
+                            displayText: '🍇All Menu🍇',
+                            id: `allmenu`
+                        }
+                    }]
                 }
-break
+            }
+        }), { userJid: m.chat, quoted: m })
+          XeonBotInc.relayMessage(m.chat, template.message, { messageId: template.key.id })
+    }
+    break
             case 'list':
              case 'menu': 
               case 'help':{
@@ -3636,25 +3621,49 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
                 XeonBotInc.sendMessage(m.chat, { image: { url: 'https://i.imgur.com/K3nhp5e.png' }, caption: `Hi *${m.pushName}*.\n\nGitHub : https://github.com/darlyn1234/darl2-bot\n\nPasos para la instalacion en linux o PC: https://appweb-darlyn.vercel.app/works/pichu2` }, { quoted: m })
             }
             break
-            case 'menu2': {
-                XeonBotInc.sendMessage(m.chat, { image: { url: 'https://i.ibb.co/ZcPLKgK/darlyn-profile-programacion.jpg' }, caption: `
-┌─❖
-│  「 ${pushname} 」
-└┬❖ wa.me/${m.sender.split("@")[0]}
+             case 'menu2': {
+        timestampe = speed();
+        latensie = speed() - timestampe
+                ngen = `Hola ${pushname}`
+    message = await prepareWAMessageMedia({ image : { url: 'https://i.pinimg.com/564x/33/8d/bf/338dbf136a95a94f3213c50931f6cab8.jpg' } }, { upload:   XeonBotInc.waUploadToServer })
+            template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
+         templateMessage: {
+                           hydratedTemplate: {
+                        imageMessage: message.imageMessage,
+                        hydratedContentText: ngen,
+                        hydratedFooterText: `
+❖ wa.me/${m.sender.split("@")[0]}
 ┌┤✑ 「 BOT INFO 」
 │└───────────────┈ ⳹
 │✙ 𝗦𝗽𝗲𝗲𝗱 : ${latensie.toFixed(4)} miliseconds
 │✙ 𝗥𝘂𝗻𝘁𝗶𝗺𝗲 : ${runtime(process.uptime())}
 │✙ 𝗕𝗼𝘁 𝗡𝗮𝗺𝗲 : ${global.botname}
-│✙ 𝗢𝘄??𝗲𝗿 𝗡𝗮𝗺𝗲 : 𓈃ּ ៹🍏𝗱𝑎𝙧̲𝘭𝐲̲𝘯̲𐂂!s⁹⁷☻‹𝟹
+│✙ 𝗢𝘄??𝗲𝗿 𝗡𝗮𝗺𝗲 : 𓈃ּ ៹🍏𝗱𝑎𝙧̲𝘭𝐲̲𝘯̲𐂂!
 │✙ 𝗢𝘄𝗻𝗲𝗿 𝗡𝘂𝗺𝗯𝗲𝗿 : ${global.owner}
 │✙ 𝗛𝗼𝘀𝘁 𝗡𝗮𝗺𝗲 : ${os.hostname()}
 │✙ 𝗣𝗹𝗮𝘁𝗳𝗼𝗿𝗺 : ${os.platform()}
-│✙ 𝗧𝗼𝘁𝗮𝗹 𝗨𝘀𝗲𝗿 : ${Object.keys(global.db.data.users).length}
-└──────────────┈ ⳹
-                ` } , [{"urlButton": {"displayText": "GitHub📍","url": `${myweb}`}},{"urlButton": {"displayText": "Web🔖","url": `${sc}`}}] )
-            }
-            break
+└──────────────┈ ⳹`,
+                        hydratedButtons: [{
+                            urlButton: {
+                                displayText: 'GitHub🔖',
+                                url: `https://github.com/darlyn1234`
+                            }
+                        }, {
+                            quickReplyButton: {
+                                displayText: '🍒List Menu🍒',
+                                id: `command`
+                                }
+                            },{quickReplyButton: {
+                                displayText: '🍇All Menu🍇',
+                                id: `allmenu`
+                            }
+                        }]
+                    }
+                }
+            }), { userJid: m.chat, quoted: m })
+              XeonBotInc.relayMessage(m.chat, template.message, { messageId: template.key.id })
+        }
+        break
              case 'indefinido': {
                 reply(`.......`)
             }
