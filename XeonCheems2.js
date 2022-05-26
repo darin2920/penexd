@@ -3423,6 +3423,11 @@ message = await prepareWAMessageMedia({ video : { url: 'https://a.uguu.se/pPremJ
                             displayText: '🍇All Menu🍇',
                             id: `allmenu`
                         }
+                    }, {
+                        quickReplyButton: {
+                            displayText: '👤Owner👤',
+                            id: `${prefix}owner`
+                        }
                     }]
                 }
             }
@@ -3430,6 +3435,7 @@ message = await prepareWAMessageMedia({ video : { url: 'https://a.uguu.se/pPremJ
           XeonBotInc.relayMessage(m.chat, template.message, { messageId: template.key.id })
     }
     break
+            
             case 'list':
              case 'menu': 
               case 'help':{
@@ -3498,7 +3504,7 @@ const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
 let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                 listMessage :{
                     title: `Hi ${pushname}`,
-                    description: `Please Choose The Menu\n\nWeb: htttp://appweb-darlyn.vercel.app`,
+                    description: `Elija el menú\n\nWeb: htttps://appweb-darlyn.vercel.app`,
                     buttonText: "Menu",
                     footerText: `${global.footer}`,
                     listType: "SINGLE_SELECT",
@@ -3621,7 +3627,7 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
                 XeonBotInc.sendMessage(m.chat, { image: { url: 'https://i.imgur.com/K3nhp5e.png' }, caption: `Hi *${m.pushName}*.\n\nGitHub : https://github.com/darlyn1234/darl2-bot\n\nPasos para la instalacion en linux o PC: https://appweb-darlyn.vercel.app/works/pichu2` }, { quoted: m })
             }
             break
-             case 'menu2': {
+   case 'menu2': {
         timestampe = speed();
         latensie = speed() - timestampe
                 ngen = `Hola ${pushname}`
@@ -3651,11 +3657,16 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
                         }, {
                             quickReplyButton: {
                                 displayText: '🍒List Menu🍒',
-                                id: `command`
+                                id: `${prefix}command`
                                 }
                             },{quickReplyButton: {
                                 displayText: '🍇All Menu🍇',
-                                id: `allmenu`
+                                id: `${prefix}allmenu`
+                            }
+                        }, {
+                            quickReplyButton: {
+                                displayText: '👤Owner👤',
+                                id: `${prefix}owner`
                             }
                         }]
                     }
